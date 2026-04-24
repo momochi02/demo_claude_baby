@@ -1,0 +1,36 @@
+.mode-toggle {
+  display: flex;
+  gap: 4px;
+  background: var(--color-bg-secondary);
+  padding: 4px;
+  border-radius: 999px;
+}
+
+.mode-btn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 999px;
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: transparent;
+  color: var(--color-text-secondary);
+}
+
+.mode-btn.active {
+  color: white;
+}
+
+.mode-btn.parent.active {
+  background: var(--color-parent-mode);
+}
+
+.mode-btn.child.active {
+  background: var(--color-child-mode);
+}
+
+.mode-btn:hover:not(.active) {
+  background: rgba(0,0,0,0.05);
+}

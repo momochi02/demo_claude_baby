@@ -1,0 +1,120 @@
+.child-home {
+  flex: 1;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(135deg, #ffeaa7 0%, #fd79a8 100%);
+  min-height: 100vh;
+}
+
+.child-welcome {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.child-avatar {
+  font-size: 5rem;
+}
+
+.child-greeting {
+  text-align: center;
+}
+
+.child-greeting h1 {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--color-text-primary);
+}
+
+.child-greeting p {
+  color: var(--color-text-secondary);
+}
+
+.child-stars {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.star {
+  font-size: 2rem;
+  opacity: 0.3;
+  transition: all 0.3s ease;
+}
+
+.star.filled {
+  opacity: 1;
+  animation: bounce 0.5s ease;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+}
+
+.child-meals-card {
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 24px;
+}
+
+.child-meals-card h3 {
+  text-align: center;
+  margin-bottom: 16px;
+  font-size: 1.2rem;
+}
+
+.child-meals-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.child-meal-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 16px;
+  background: var(--color-bg-secondary);
+  border-radius: var(--radius-md);
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.child-meal-item.done {
+  background: linear-gradient(135deg, #6bcb77, #4d96ff);
+  color: white;
+}
+
+.child-meal-icon {
+  font-size: 2.5rem;
+  margin-bottom: 4px;
+}
+
+.child-meal-type {
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.child-meal-check {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  background: white;
+  color: var(--color-secondary);
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.child-actions {
+  margin-top: auto;
+}

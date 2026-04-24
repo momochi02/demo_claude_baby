@@ -1,0 +1,58 @@
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-header {
+  background: var(--color-white);
+  padding: 12px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: var(--shadow-sm);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.app-logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--color-primary);
+}
+
+.app-main {
+  flex: 1;
+  display: flex;
+}
+
+.parent-layout {
+  display: flex;
+  flex: 1;
+  min-height: 0;
+}
+
+.parent-content {
+  flex: 1;
+  overflow-y: auto;
+  background: var(--color-bg-primary);
+}
+
+.placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  font-size: 1.2rem;
+  color: var(--color-text-secondary);
+  flex-direction: column;
+  gap: 8px;
+}
+
+.placeholder span {
+  font-size: 2rem;
+}
