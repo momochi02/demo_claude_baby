@@ -1,67 +1,72 @@
-Build a ReactJS "Create Request" page for an automation testing platform.
+Refactor and improve the UI/UX of an existing ReactJS web application to make it clean, consistent, modern, and professional.
 
-Layout:
-- 3 columns:
-  1. LEFT: Step Navigation (vertical)
-  2. CENTER: Main content (form)
-  3. RIGHT: Device list (keep existing UI)
+Goals:
+- Unify design across all pages (Create Request, Module Configuration, Device Panel, etc.)
+- Improve readability, spacing, and visual hierarchy
+- Make the UI feel like modern tools (Jira, Notion, Linear)
 
-Flow has 3 steps:
-1. Select Module
-2. Module Configuration
-3. Review & Submit
+Requirements:
 
-LEFT (Step Navigation):
-- Show steps with status: active / done / upcoming
-- Under "Select Module", display selected module name + description (no border, simple text)
+1. Layout & Structure
+- Use consistent spacing system (8px grid)
+- Align all sections properly
+- Use clear separation between LEFT (navigation), CENTER (content), RIGHT (device panel)
+- Avoid clutter and unnecessary borders
 
-CENTER:
+2. Typography
+- Define hierarchy:
+  - Page title (large, bold)
+  - Section title
+  - Label
+  - Description (small, gray)
+- Use consistent font sizes and weights
+- Improve line-height for readability
 
-Step 1 – Select Module:
-- Radio list:
-  - Check GUI
-  - Interruption Test
-  - Change Language
-  - App Update
-  - Fotal Update
-- Next button (disabled if not selected)
+3. Components Styling
+- Buttons:
+  - Primary (blue gradient or solid)
+  - Secondary (outline)
+  - Disabled state clearly visible
+- Inputs / Select / Radio / Checkbox:
+  - Same height
+  - Same border-radius
+  - Consistent spacing
+- Cards:
+  - Use soft shadow instead of heavy borders
+  - Rounded corners (12–16px)
 
-Step 2 – Module Configuration (focus on Fotal Update):
-- Sections:
-  1. Update Scenario (App Update / Flash CSC / Software Update)
-  2. Update Input (dynamic by scenario)
-  3. Test Scope (Regression / Smoke)
-  4. Regression Suite (dropdown or upload)
-  5. Advanced Options (checkboxes)
-- Show "Configuration Summary" at bottom
+4. Navigation (Left Panel)
+- Minimal style (no heavy boxes)
+- Show active step clearly
+- Show selected module as inline text (not boxed)
+
+5. Forms (Center Panel)
+- Group into sections
+- Add proper spacing between sections
 - Only form content scrollable
-- Footer buttons (Back / Next) fixed
+- Keep footer buttons (Back / Next / Create) fixed
 
-Step 3 – Execution Summary:
-- Show selected config:
-  - Module, Scenario, Scope, Suite, Options, Device
-- Show error if no device selected
-- "Create Request" button disabled until valid
+6. Device Panel (Right)
+- Improve list readability
+- Highlight selected device
+- Add hover state
 
-RIGHT (Device Panel):
-- Reuse existing device list
-- Allow selecting 1 device
-- Show selected device in summary
+7. Colors
+- Primary: blue
+- Background: light gray / white
+- Text: dark gray / black
+- Secondary text: gray
+- Avoid too many colors
 
-UX requirements:
-- Clean, modern UI (like Jira / Notion)
-- No heavy borders in navigation
-- Clear spacing and hierarchy
-- Buttons always visible (sticky footer)
-- Disable Next when required fields missing
+8. UX Improvements
+- Disable buttons when invalid
+- Add subtle hover effects
+- Add smooth transitions (optional)
+- Keep UI simple and not over-designed
 
-Tech:
-- React functional components
-- Split into components:
-  - StepNavigation
-  - ModuleSelector
-  - ModuleConfiguration
-  - FotalConfigForm
-  - ExecutionSummary
-  - DevicePanel
-- Use props + state to manage flow
+Output:
+- Refactored React components (JSX + styles)
+- Reusable style system (constants or CSS)
+- Clean, maintainable code
+- Make the UI feel premium and minimal, similar to modern SaaS dashboards.
+Avoid bulky UI and prefer clean, airy design.
